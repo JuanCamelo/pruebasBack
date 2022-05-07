@@ -20,8 +20,7 @@ jobs:
           dotnet sonarscanner begin /k:"JuanCamelo_pruebasBack"
             /d:sonar.login=${{ secrets.SONAR_TOKEN }}
             /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
-          dotnet build --no-incremental
-          
+          dotnet build          
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
