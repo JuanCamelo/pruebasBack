@@ -18,9 +18,9 @@ jobs:
       - name: dotnet-sonarscanner
         uses: spoland/dotnet-sonarcloud-analysis@v1.0
         with:
-          project-key: your-project-key
+          project-key: ${{ secrets.SONAR_TOKEN }} 
           sonar-host-url: https://sonarcloud.io
-          sonar-organization: your-organization
+          sonar-organization: JuanCamelo
           opencover-reports-paths: "**/*.opencover.xml"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
