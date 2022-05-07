@@ -15,8 +15,6 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
-      - name: dotnet-sonarscanner
-        uses: spoland/dotnet-sonarcloud-analysis@v1.0
         with:
           project-key: 'JuanCamelo_pruebasBack'
           sonar-host-url: https://sonarcloud.io
