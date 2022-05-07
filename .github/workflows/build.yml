@@ -20,7 +20,7 @@ jobs:
           dotnet sonarscanner begin /k:"JuanCamelo_pruebasBack"
             /d:sonar.login=${{ secrets.SONAR_TOKEN }}
             /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml  
-          # dotnet-coverage collect 'dotnet test'-f xml  -o 'coverage.xml'
+          dotnet-coverage collect 'dotnet test'-f xml  -o 'coverage.xml'
           # dotnet sonarscanner end /d:sonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
