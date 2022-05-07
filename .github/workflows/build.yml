@@ -1,6 +1,3 @@
-name: SonarCloud
-on:
-  push:
 name: Build
 on:
   push:
